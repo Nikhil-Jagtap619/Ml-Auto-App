@@ -159,7 +159,7 @@ if uploaded_file is not None:
     st.markdown('**1.1. Glimpse of dataset**')
     st.write(df)
     build_model(df)
-elif :
+elif:
     df = pd.read_excel(uploaded_file)
     st.markdown('**1.1. Glimpse of dataset**')
     st.write(df)
