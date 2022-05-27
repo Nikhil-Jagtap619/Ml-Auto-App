@@ -137,7 +137,7 @@ with st.sidebar.header('1. Upload your CSV data'):
 """)
     
 with st.sidebar.header('2. Upload your Excel data'):
-    uploaded_file = st.sidebar.file_uploader("Upload your input Excel file", type=["xlsx"])
+    uploaded_file_xlsx = st.sidebar.file_uploader("Upload your input Excel file", type=["xlsx"])
     st.sidebar.markdown("""
 [Example Excel input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.xlsx)
 """)
@@ -159,7 +159,7 @@ if uploaded_file is not None:
     st.markdown('**1.1. Glimpse of dataset**')
     st.write(df)
     build_model(df)
-elif uploaded_file is type["xlsx"]:
+elif uploaded_file_xlsx:
     df = pd.read_excel(uploaded_file)
     st.markdown('**1.1. Glimpse of dataset**')
     st.write(df)
