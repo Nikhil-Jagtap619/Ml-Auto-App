@@ -1,6 +1,5 @@
-# App created by Data Professor http://youtube.com/dataprofessor
-# GitHub repo of this app https://github.com/dataprofessor/ml-auto-app
-# Demo of this app https://share.streamlit.io/dataprofessor/ml-auto-app/main/app.py
+# GitHub repo of this app https://github.com/akshaynarvate/Ml-Auto-App
+# Demo of this app https://share.streamlit.io/akshaynarvate/ml-auto-app/main/app.py
 
 import streamlit as st
 import pandas as pd
