@@ -159,6 +159,11 @@ if uploaded_file is not None:
     st.markdown('**1.1. Glimpse of dataset**')
     st.write(df)
     build_model(df)
+elif uploaded_file_xlsx is not None:
+    df = pd.read_excel(uploaded_file_xlsx)
+    st.markdown('**1.1. Glimpse of dataset**')
+    st.write(df)
+    build_model(df)
 else:
     st.info('Awaiting for CSV file to be uploaded.')
     if st.button('Press to use Example Dataset'):
