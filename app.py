@@ -124,7 +124,7 @@ st.write("""
 
 In this implementation, the **lazypredict** library is used for building several machine learning models at once.
 
-Developed by: [Data Professor](http://youtube.com/dataprofessor)
+Project by: [Akshay Narvate](https://share.streamlit.io/akshaynarvate/resume-app/main)
 
 """)
 
@@ -134,6 +134,12 @@ with st.sidebar.header('1. Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
     st.sidebar.markdown("""
 [Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.csv)
+""")
+    
+with st.sidebar.header('1. Upload your Excel data'):
+    uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["xlsx"])
+    st.sidebar.markdown("""
+[Example Excel input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.csv)
 """)
 
 # Sidebar - Specify parameter settings
@@ -150,6 +156,11 @@ st.subheader('1. Dataset')
 
 if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
+    st.markdown('**1.1. Glimpse of dataset**')
+    st.write(df)
+    build_model(df)
+elif :
+    df = pd.read_excel(uploaded_file)
     st.markdown('**1.1. Glimpse of dataset**')
     st.write(df)
     build_model(df)
