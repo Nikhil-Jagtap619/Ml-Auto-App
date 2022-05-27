@@ -61,16 +61,7 @@ def build_model(df):
         plt.figure(figsize=(3, 9))
         sns.set_theme(style="whitegrid")
         ax1 = sns.barplot(y=predictions_test.index, x="R-Squared", data=predictions_test)
-        ax1.set(xlim=(0, 1))
-        
-        st.markdown('**Adjusted R-squared**'):
-        # Tall
-        predictions_test["Adjusted R-Squared"] = [0 if i < 0 else i for i in predictions_test["Adjusted R-Squared"] ]
-        plt.figure(figsize=(3, 9))
-        sns.set_theme(style="whitegrid")
-        ax1 = sns.barplot(y=predictions_test.index, x="Adjusted R-Squared", data=predictions_test)
-        ax1.set(xlim=(0, 1))
-        
+        ax1.set(xlim=(0, 1))        
     st.markdown(imagedownload(plt,'plot-r2-tall.pdf'), unsafe_allow_html=True)
         # Wide
     plt.figure(figsize=(9, 3))
