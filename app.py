@@ -136,14 +136,14 @@ with st.sidebar.header('1. Upload your CSV data'):
 [Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.csv)
 """)
     
-with st.sidebar.header('1. Upload your Excel data'):
-    uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["xlsx"])
+with st.sidebar.header('2. Upload your Excel data'):
+    uploaded_file = st.sidebar.file_uploader("Upload your input Excel file", type=["xlsx"])
     st.sidebar.markdown("""
-[Example Excel input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.csv)
+[Example Excel input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.xlsx)
 """)
 
 # Sidebar - Specify parameter settings
-with st.sidebar.header('2. Set Parameters'):
+with st.sidebar.header('3. Set Parameters'):
     split_size = st.sidebar.slider('Data split ratio (% for Training Set)', 10, 90, 80, 5)
     seed_number = st.sidebar.slider('Set the random seed number', 1, 100, 42, 1)
 
